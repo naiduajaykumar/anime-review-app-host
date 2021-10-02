@@ -8,7 +8,7 @@ const dpPath = path.join(__dirname, "todoApplication.db");
 const app = express();
 app.use(express.json());
 
-const PORT = process.env.PORT || 3001;
+
 
 let db = null;
 
@@ -18,8 +18,8 @@ const initializeDbAndServer = async () => {
       filename: dpPath,
       driver: sqlite3.Database,
     });
-    app.listen(PORT, () =>
-      console.log(`Server Running at http://localhost:${PORT}`)
+    app.listen(process.env.PORT || 3000, () =>
+      console.log("Server Running at http://localhost:3000")
     );
   } catch (e) {
     console.log(`DB Error: ${e.message}`);
