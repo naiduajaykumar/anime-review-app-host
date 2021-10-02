@@ -1,0 +1,14 @@
+GET http://localhost:3001/ratings/
+
+
+####
+POST  http://localhost:3001/ratings/
+Content-Type: application/json
+
+{
+  "id": 10,
+  "todo": "Finalize event theme",
+  "priority": "LOW",
+  "status": "TO DO"
+}
+
